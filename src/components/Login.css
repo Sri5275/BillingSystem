@@ -1,0 +1,45 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+  }
+  
+  .form-control-lg {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .link-danger {
+    color: #dc3545;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+  
+  footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 100%;
+      padding: 1rem;
+    }
+  }
