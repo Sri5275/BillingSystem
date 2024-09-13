@@ -26,7 +26,6 @@ function Navigationbar(props){
           <Nav className="me-0">
               <NavLink to="/products" className='nav-link' style={({isActive})=>{return isActive?activeLink:inactiveLink}}>Products</NavLink>
               <NavLink to="/bill" className='nav-link' style={({isActive})=>{return isActive?activeLink:inactiveLink}}>Cart</NavLink>
-              
               <NavLink to="/billpage" className='nav-link' style={({isActive})=>{return isActive?activeLink:inactiveLink}}>Bill</NavLink>
               <Button className='btn btn-danger rounded-3' onClick={Logout}>Logout</Button>
             </Nav>
