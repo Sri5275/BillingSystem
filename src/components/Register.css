@@ -1,0 +1,131 @@
+/* Container for the entire registration form page */
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f4f8;
+    padding: 20px;
+}
+
+/* Styling the registration form card */
+.register-row {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction: row;
+    gap: 0rem;
+}
+
+/* Image styling for the illustration */
+.register-illustration {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+}
+
+/* Content column styling */
+.register-content {
+    flex: 1;
+}
+
+/* Header styling for a cleaner, bold look */
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+/* Form label styling */
+.register-form .form-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+/* Input field styling */
+.register-form .form-control {
+    border-radius: 10px;
+    padding: 14px;
+    border: 1px solid #cbd2d9;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Input focus effects for a highlighted look */
+.register-form .form-control:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 6px rgba(0, 86, 210, 0.25);
+    outline: none;
+}
+
+/* Error message styling */
+.error-text {
+    font-size: 0.85rem;
+    color: #e74c3c;
+    margin-top: 0.25rem;
+}
+
+/* Register button styling */
+.register-btn {
+    width: 50%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    align-items: center;
+    background-color:#1e90ff;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 1.5rem;
+}
+
+/* Hover effect for the register button */
+.register-btn:hover {
+    background-color:#1e90ff;
+    box-shadow: 0 6px 16px rgba(0, 65, 168, 0.4);
+    cursor: pointer;
+}
+
+/* Active state for register button */
+.register-btn:active {
+    background-color: #1e90ff;
+    box-shadow: 0 4px 10px rgba(0, 51, 134, 0.4);
+    transform: scale(0.98);
+}
+
+/* Link styling for the login option */
+.text-primary {
+    color: #1e90ff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.text-primary:hover {
+    color:#1e90ff;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .register-row {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .register-illustration {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}

@@ -1,45 +1,97 @@
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .display-4 {
-    font-size: 2.5rem;
-  }
-  
-  .lead {
-    font-size: 1.25rem;
-  }
-  
-  .form-control-lg {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
-  .link-danger {
-    color: #dc3545;
-  }
-  
-  .text-danger {
-    color: #dc3545;
-    font-size: 0.8rem;
-    margin-top: 0.25rem;
-  }
-  
-  footer {
-    background-color: #007bff;
-    color: #fff;
-    padding: 1rem 2rem;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      max-width: 100%;
-      padding: 1rem;
-    }
-  }
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa; /* Softer, neutral background */
+}
+
+.login-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 700px; /* Slightly smaller max width */
+}
+
+.login-image {
+  flex: 1;
+  padding: 1rem;
+}
+
+.login-image img {
+  width: 100%;
+  border-radius: 8px; /* Subtle rounded corners */
+}
+
+.login-form {
+  flex: 1;
+  padding: 1rem;
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333333; /* Darker text color */
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d9e6;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #1e90ff; /* Professional blue for focus */
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.3);
+}
+
+.text-danger {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: #e74c3c;
+}
+
+.btn-primary {
+  background-color: #1e90ff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #187bcd; /* Slightly darker blue on hover */
+}
+
+.link-danger {
+  color: #d63031; /* Softer red for the register link */
+  text-decoration: none;
+}
+
+.link-danger:hover {
+  color: #b23a3a; /* Darken register link on hover */
+}
+
+a {
+  color: #1e90ff; /* Professional blue for all links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

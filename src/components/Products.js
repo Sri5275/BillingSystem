@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navigationbar from './Navigationbar';
-import { Button, Col, Form, Modal, Row } from 'react-bootstrap';
+import { Button, Col, Form, Modal, Row, Card, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-
+import './Products.css'
 function Products(props) {
   const [product, setProducts] = useState([]);
   const [show, setShow] = useState(false);
@@ -43,68 +43,92 @@ function Products(props) {
   return (
     <div>
       <Navigationbar setCurrentUser={props.setCurrentUser} />
-      {props.admin && 
-        <div className='container mt-2 d-flex justify-content-end'>
-          <Link className='btn btn-success ms-auto' to='/addproduct'>Add product to Store</Link>
-        </div>
-      }
-      <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-3'>
-        {product.map((prodObj) => prodObj.quantity > 0 &&
-          <div className="col mb-3 mx-auto d-flex align-items-stretch" key={prodObj.id}>
-            <div className="card text-center">
-              <div className="card-body d-flex flex-column align-items-center">
-                <h5 className='mt-2'>Product: {prodObj.product}</h5>
-                <h5 className='mt-2'>Quantity Available: {prodObj.quantity} kg or ltr</h5>
-                <h5 className='mt-2'>Price per kg: Rs.{prodObj.price}</h5>
-                <h5 className='mt-2'>Expiry Date: {prodObj.expiryDate}</h5>
-              </div>
-              <div>
-                <Button type='submit' className="btn btn-success m-2" onClick={() => Add(prodObj)}>Add to Cart</Button>
-              </div>
-            </div>
+      
+      <Container className="mt-4">
+        {/* Admin Add Product Button */}
+        {props.admin && 
+          <div className='d-flex justify-content-end'>
+            <Link className='btn btn-success mb-3' to='/addproducts'>
+              + Add New Product
+            </Link>
           </div>
-        )}
+        }
+
+        <Row className='g-4'>
+          {product.map((prodObj) => prodObj.quantity > 0 &&
+            <Col key={prodObj.id} xs={12} sm={6} md={4} lg={3}>
+              <Card className="h-100 shadow-sm">
+                <Card.Body className="d-flex flex-column">
+                  <Card.Title className="text-primary text-center">
+                    {prodObj.product}
+                  </Card.Title>
+                  <Card.Text className="text-secondary">
+                    <strong>Quantity Available:</strong> {prodObj.quantity} kg or ltr<br />
+                    <strong>Price per kg:</strong> Rs.{prodObj.price}<br />
+                    <strong>Expiry Date:</strong> {prodObj.expiryDate}
+                  </Card.Text>
+                  <Button 
+                    variant="success" 
+                    className="mt-auto w-100"
+                    onClick={() => Add(prodObj)}
+                  >
+                    Add to Cart
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          )}
+        </Row>
+
+        {/* Modal for Adding Product to Cart */}
         <Modal show={show} onHide={handleClose} backdrop="static" centered>
           <Modal.Header closeButton>
-            <Modal.Title>Add Product</Modal.Title>
+            <Modal.Title>Add Product to Cart</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={handleSubmit(finalAdd)}>
               <Row className="mb-3">
-                <Form.Group as={Col} md="3">
-                  <Form.Label>Id</Form.Label>
+                <Form.Group as={Col} md="4">
+                  <Form.Label>Product ID</Form.Label>
                   <Form.Control type="number" disabled {...register("id")} />
                 </Form.Group>
-                <Form.Group as={Col} md="6">
-                  <Form.Label>Product</Form.Label>
-                  <Form.Control type="text" placeholder="Enter Product" disabled {...register("product")} />
+                <Form.Group as={Col} md="8">
+                  <Form.Label>Product Name</Form.Label>
+                  <Form.Control type="text" disabled {...register("product")} />
                 </Form.Group>
-                <Form.Group as={Col} md="3">
-                  <Form.Label>Quantity</Form.Label>
+              </Row>
+              <Row className="mb-3">
+                <Form.Group as={Col} md="6">
+                  <Form.Label>Available Quantity</Form.Label>
                   <Form.Control type="number" disabled {...register("quantity")} />
                 </Form.Group>
-                <Form.Group as={Col} md="3">
+                <Form.Group as={Col} md="6">
                   <Form.Label>Price per kg</Form.Label>
                   <Form.Control type="number" disabled {...register("price")} />
                 </Form.Group>
-                <Form.Group as={Col} md="4">
+              </Row>
+              <Row className="mb-3">
+                <Form.Group as={Col} md="6">
                   <Form.Label>Expiry Date</Form.Label>
                   <Form.Control type="date" disabled {...register("expiryDate")} />
                 </Form.Group>
-                <Form.Group as={Col} md="5">
+                <Form.Group as={Col} md="6">
                   <Form.Label>Required Quantity</Form.Label>
-                  <Form.Control type="number" {...register("requiredQuantity", { required: true, max: { value: maxi } })} />
-                  {errors.requiredQuantity?.type === 'required' && <p className='text-danger'>*This field is required</p>}
+                  <Form.Control 
+                    type="number" 
+                    {...register("requiredQuantity", { required: true, max: { value: maxi } })}
+                  />
+                  {errors.requiredQuantity?.type === 'required' && <p className='text-danger'>*Required field</p>}
                   {errors.requiredQuantity?.type === 'max' && <p className='text-danger'>*Quantity Limit Exceeded</p>}
                 </Form.Group>
               </Row>
-              <Button type='submit' variant="primary" className='d-flex float-end'>
-                Add
+              <Button type="submit" variant="primary" className="w-100">
+                Add to Cart
               </Button>
             </Form>
           </Modal.Body>
         </Modal>
-      </div>
+      </Container>
     </div>
   );
 }

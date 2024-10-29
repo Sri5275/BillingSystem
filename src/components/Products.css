@@ -1,0 +1,138 @@
+/* Center the main container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 40px 20px; /* Add top and bottom padding for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Center the row and give it padding */
+  .row.g-4 {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Card styling for each product */
+  .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 20px;
+    max-width: 300px; /* Set a max width for consistency */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0056d2;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #5a6274;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: center; /* Center text in card */
+  }
+  
+  .card .btn {
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width button */
+    padding: 10px;
+  }
+  
+  .card .btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Modal styling */
+  .modal-header {
+    border-bottom: none;
+  }
+  
+  .modal-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .modal-body {
+    padding: 20px 30px;
+  }
+  
+  .modal .form-label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .modal .form-control {
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #ccd1d9;
+    transition: all 0.3s ease;
+  }
+  
+  .modal .form-control:focus {
+    border-color: #0056d2;
+    box-shadow: 0 0 5px rgba(0, 86, 210, 0.2);
+  }
+  
+  .modal .text-danger {
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+  }
+  
+  .modal .btn-primary {
+    background-color: #0056d2;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    width: 100%; /* Full width button */
+    padding: 10px;
+  }
+  
+  .modal .btn-primary:hover {
+    background-color: #0041a8;
+  }
+  
+  /* Add Product Button for Admin */
+  .btn-success.mb-3 {
+    font-weight: 600;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-success.mb-3:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 20px;
+      max-width: 90%; /* Make cards wider on smaller screens */
+    }
+    .container {
+      padding: 20px;
+    }
+  }
+  

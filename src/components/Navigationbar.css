@@ -1,0 +1,42 @@
+/* Ensure logo is aligned to the top-left */
+.navbar-logo {
+    max-width: 80px; /* Adjust size as needed */
+    max-height: 50px;
+    object-fit: contain;
+    margin-top: -10px; /* Move logo slightly upwards for alignment */
+}
+
+/* Style for the navigation links */
+.navbar .nav-link {
+    font-size: 1.1rem;
+    color: orange;
+    font-weight: bold;
+    padding: 0 1rem; /* Added padding between links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+.navbar .nav-link:hover {
+    color: darkorange;
+}
+
+/* Styling for Logout button */
+.navbar .btn-outline-danger {
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-top: -10px; /* Align button at top-right */
+}
+
+/* Align container contents to the right */
+.navbar-container {
+    display: flex;
+    justify-content: flex-end; /* Align navbar items to the right */
+}
+
+/* Additional styles for the Navbar to ensure proper alignment */
+.container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+}

@@ -19,6 +19,11 @@
       "id": "4b36",
       "emailAddress": "saketh1884@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": "8ff9",
+      "emailAddress": "mohith@gmail.com",
+      "password": "123456"
     }
   ],
   "userPurchases": [
@@ -69,6 +74,33 @@
           "price": 40,
           "expiryDate": "2023-02-23",
           "requiredQuantity": 2
+        }
+      ]
+    },
+    {
+      "id": "77a5",
+      "name": {},
+      "purchases": [
+        {
+          "id": "1",
+          "product": "Wheat Flour",
+          "price": 50,
+          "expiryDate": "2023-10-12",
+          "requiredQuantity": 12
+        },
+        {
+          "id": "6",
+          "product": "thoparam",
+          "price": 10,
+          "expiryDate": "2023-12-08",
+          "requiredQuantity": 1
+        },
+        {
+          "id": "5",
+          "product": "Onion",
+          "price": 30,
+          "expiryDate": "2023-08-08",
+          "requiredQuantity": 12
         }
       ]
     }
