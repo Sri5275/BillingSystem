@@ -107,6 +107,94 @@
           "requiredQuantity": 1
         }
       ]
+    },
+    {
+      "id": "c813",
+      "name": {
+        "id": "bef7",
+        "emailAddress": "saketh1844@gmail.com",
+        "confirmPassword": "Sai@1234"
+      },
+      "purchases": [
+        {
+          "id": "1",
+          "product": "Wheat Flour",
+          "price": 50,
+          "expiryDate": "2023-10-12",
+          "requiredQuantity": 1
+        },
+        {
+          "id": "2",
+          "product": "Rice",
+          "price": 40,
+          "expiryDate": "2023-02-23",
+          "requiredQuantity": 1
+        },
+        {
+          "id": "2",
+          "product": "Rice",
+          "price": 40,
+          "expiryDate": "2023-02-23",
+          "requiredQuantity": 2
+        },
+        {
+          "id": "3",
+          "product": "Domex",
+          "price": 70,
+          "expiryDate": "2023-02-23",
+          "requiredQuantity": 2
+        },
+        {
+          "id": "3",
+          "product": "Domex",
+          "price": 70,
+          "expiryDate": "2023-02-23",
+          "requiredQuantity": 2
+        }
+      ]
+    },
+    {
+      "id": "bad8",
+      "name": {
+        "id": "bef7",
+        "emailAddress": "saketh1844@gmail.com",
+        "confirmPassword": "Sai@1234"
+      },
+      "purchases": [
+        {
+          "id": "3",
+          "product": "Domex",
+          "price": 70,
+          "expiryDate": "2023-02-23",
+          "requiredQuantity": 1
+        }
+      ]
+    },
+    {
+      "id": "6906",
+      "name": {},
+      "purchases": [
+        {
+          "id": "2",
+          "product": "Rice",
+          "price": 40,
+          "expiryDate": "2023-02-23",
+          "requiredQuantity": 2
+        }
+      ]
+    },
+    {
+      "id": "786c",
+      "name": {},
+      "purchases": [
+        {
+          "id": "1",
+          "product": "Wheat Flour",
+          "price": 50,
+          "expiryDate": "2023-10-12",
+          "requiredQuantity": 2
+        }
+      ]
     }
   ],
   "products": [

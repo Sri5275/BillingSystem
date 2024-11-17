@@ -27,10 +27,10 @@ const BillingPage = (props) => {
     .then(res=>console.log(res))
     .catch(err=>console.log(err))
     props.cartProducts.map((obj)=>{
-      axios.get('http://localhost:4000/products/${obj.id}')
+      axios.get(`http://localhost:4000/products/${obj.id}`)
       .then(res=>{
         res.data.quantity=res.data.quantity-obj.requiredQuantity;
-        axios.put('http://localhost:4000/products/${obj.id},res.data')
+        axios.put(`http://localhost:4000/products/${obj.id},res.data`)
         .then(res=>console.log(res))
         .catch(err=>console.log(err))
       })

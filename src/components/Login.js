@@ -70,6 +70,9 @@ function Login(props) {
             </div>
             <Button className="btn btn-primary w-100" type='submit'>Login</Button>
             <p className="small fw-bold text-center mt-3 mb-0">
+              Are you an admin? <Link to='/admin' className="link-danger">Login as Admin</Link>
+            </p>
+            <p className="small fw-bold text-center mt-3 mb-0">
               Don't have an account? <Link to='/register' className="link-danger">Register</Link>
             </p>
           </form>

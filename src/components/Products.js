@@ -4,7 +4,8 @@ import Navigationbar from './Navigationbar';
 import { Button, Col, Form, Modal, Row, Card, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import './Products.css'
+import './Products.css';
+
 function Products(props) {
   const [product, setProducts] = useState([]);
   const [show, setShow] = useState(false);
@@ -12,15 +13,21 @@ function Products(props) {
   const [maxi, setMaxi] = useState(0);
   const { register, setValue, getValues, handleSubmit, formState: { errors } } = useForm();
 
+  // Fetch products from API
   useEffect(() => {
     axios.get('http://localhost:4000/products')
       .then(res => setProducts(res.data))
-      .catch(err => console.log(err));
-  }, []);
+      .catch(err => {
+        console.error("Error fetching products: ", err);
+        alert("Unable to fetch products at the moment");
+      });
+  },[]);
 
+  // Modal show and hide functions
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // Function to add product to the cart
   const Add = (prodToAdd) => {
     handleShow();
     setAddToCart(prodToAdd);
@@ -32,6 +39,7 @@ function Products(props) {
     setValue("expiryDate", prodToAdd.expiryDate);
   };
 
+  // Final Add to Cart logic
   const finalAdd = () => {
     handleClose();
     let produ = getValues();
@@ -43,10 +51,10 @@ function Products(props) {
   return (
     <div>
       <Navigationbar setCurrentUser={props.setCurrentUser} />
-      
+
       <Container className="mt-4">
         {/* Admin Add Product Button */}
-        {props.admin && 
+        {props.admin &&
           <div className='d-flex justify-content-end'>
             <Link className='btn btn-success mb-3' to='/addproducts'>
               + Add New Product
@@ -54,6 +62,7 @@ function Products(props) {
           </div>
         }
 
+        {/* Product Grid */}
         <Row className='g-4'>
           {product.map((prodObj) => prodObj.quantity > 0 &&
             <Col key={prodObj.id} xs={12} sm={6} md={4} lg={3}>
