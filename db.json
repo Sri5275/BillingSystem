@@ -1,29 +1,16 @@
 {
   "users": [
     {
-      "emailAddress": "nithish@gmail.com",
-      "password": "123456",
-      "id": "1"
+      "id": "b986",
+      "emailAddress": "lavan@gmail.com",
+      "password": "Lavan@1234",
+      "confirmPassword": "Lavan@1234"
     },
     {
-      "emailAddress": "nithishkumar@gmail.com",
-      "password": "123456",
-      "id": "2"
-    },
-    {
-      "emailAddress": "nithishk@gmail.com",
-      "password": "1234",
-      "id": "3"
-    },
-    {
-      "id": "4b36",
-      "emailAddress": "saketh1884@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "8ff9",
-      "emailAddress": "mohith@gmail.com",
-      "password": "123456"
+      "id": "bef7",
+      "emailAddress": "saketh1844@gmail.com",
+      "password": "Sai@1234",
+      "confirmPassword": "Sai@1234"
     }
   ],
   "userPurchases": [
@@ -101,6 +88,23 @@
           "price": 30,
           "expiryDate": "2023-08-08",
           "requiredQuantity": 12
+        }
+      ]
+    },
+    {
+      "id": "8797",
+      "name": {
+        "id": "b986",
+        "emailAddress": "lavan@gmail.com",
+        "confirmPassword": "Lavan@1234"
+      },
+      "purchases": [
+        {
+          "id": "1",
+          "product": "Wheat Flour",
+          "price": 50,
+          "expiryDate": "2023-10-12",
+          "requiredQuantity": 1
         }
       ]
     }

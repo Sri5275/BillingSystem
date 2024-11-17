@@ -22,7 +22,7 @@ function Navigationbar(props) {
     <header className="header-container">
       {/* Separate logo container aligned to the top-left */}
       <div className="logo-container">
-        <a href="/">
+        <a href="/products">
           <img 
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6iRcPIckSZO4ZStCeHLyOcaykFyBHPtmr9w&usqp=CAU" 
             alt="Brand Logo" 
